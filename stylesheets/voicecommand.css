@@ -1,0 +1,236 @@
+/*
+ * Voice Command
+
+Copyright 2009 Palm, Inc.  All rights reserved.
+
+*/
+
+#vc_session, #vc_background, #vc_tutorial {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	text-align:center;
+}
+
+#vc_bg {
+	background: url(../images/voice-command-mic-background.png) center center no-repeat;
+	display: block;
+	position: fixed;
+	margin: 0 auto;
+	width: 100%;
+	height: 90%;
+}
+
+#spacing-box { 
+	position: fixed;
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	height: 135px;
+}
+
+#vc_tutorial_spacing { 
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	height: 20px;
+}
+
+#vc_mic_image {
+	position: fixed;
+	display: block;
+	top: 0;
+	height: 90%;
+	overflow: hidden;
+}
+
+#vc_no_lang_display {
+	text-align: center;
+	color: #fff;
+	height: 100%;
+	padding-top:20px;
+	background: url(../images/voice-command-mic-downloading.png) center center no-repeat;
+	position:fixed;
+}
+ 
+#vc_no_lang_display.vc-title {
+	outline: 1px solid red;
+}
+
+#vc_list_options {
+	text-align:center;
+	width: 100%;
+	height: 100%;
+	display:block;
+	z-index:100;
+	color: #fff;
+	font-size: 16px;
+}
+
+#vc_options_text {
+	margin-top: 20px;
+	text-align: center;
+}
+
+#vc_options_title {
+	font-size: 24px;
+}
+
+#vc_options_title_subtext {
+	font-size: 14px;
+} 
+
+#vc-text {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	display: block;
+	margin: 0 auto;
+}
+
+	#vc-text .vc-title {
+		color: #fff;
+		text-align: center;
+		font-size: 22px;
+		width: 100%;
+		font-weight: bold;
+		margin-top: 20px;
+	}
+
+
+	#vc-text .vc-tutorial-text {
+		color: #fff;
+		text-align: center;
+		font-size: 16px;
+	}
+
+	#vc_listening_spinner {
+		display: block;
+		position: fixed;
+		background-position: center top;
+		background-repeat: none;
+		z-index: 30;
+		height: 122px;
+		width: 121px;
+		margin-top: -89px;
+	} 
+
+.vc-description {
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	position: absolute;
+	width: 305px;
+	margin: 0 auto;
+	display: block;
+	bottom: 65px;
+	padding-bottom: 10px;
+}
+
+.vc-description span {
+	font-weight: bold;
+}
+
+.vc-microphone-icon {
+	width: 190px;
+	left: 20%;
+}
+
+.vc-microphone-icon.recording {
+	width: 60px;
+	left: 40%;
+	background: url(../images/voice-command-mic-sprite-11.png) left center no-repeat;
+}
+
+.vc-microphone-icon.recording.bluetooth {
+	background: url(../images/voice-command-mic-sprite-11-bt.png) left center no-repeat;
+}
+
+.vc-microphone-icon.playback,
+.vc-microphone-icon.calling {
+    background: url(../images/voice-command-mic-playback.png) center center no-repeat;
+}
+
+.vc-microphone-icon.notrecognized {
+    background: url(../images/voice-command-mic-not-recognized.png) center center no-repeat;
+}
+
+.vc-microphone-icon.recording.level-2 {
+		background-position: -60px center;
+}
+.vc-microphone-icon.recording.level-3 {
+		background-position: -120px center;
+}
+.vc-microphone-icon.recording.level-4 {
+		background-position: -180px center;
+}
+.vc-microphone-icon.recording.level-5 {
+		background-position: -240px center;
+}
+.vc-microphone-icon.recording.level-6 {
+		background-position: -300px center;
+}
+.vc-microphone-icon.recording.level-7 {
+		background-position: -360px center;
+}
+.vc-microphone-icon.recording.level-8 {
+		background-position: -420px center;
+}
+.vc-microphone-icon.recording.level-9 {
+		background-position: -480px center;
+}
+.vc-microphone-icon.recording.level-10 {
+		background-position: -540px center;
+}
+.vc-microphone-icon.recording.level-11 {
+		background-position: -600px center;
+}
+
+#vc_skip_button {
+	height: 60px;
+	line-height: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	width: 315px;
+	color: #fff;
+	padding: 0px;
+	margin: 0px auto;
+	-webkit-border-image: url(../images/phone-menu-button-tall.png) 0 25 210 25 !important;
+	-webkit-box-sizing: border-box;
+	border-width: 0px 25px 0px 25px;
+	box-sizing: border-box;
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	z-index:100;
+}
+
+#vc_cancel_button {
+	height: 60px;
+	line-height: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	width: 315px;
+	color: #fff;
+	padding: 0px;
+	margin: 0px auto;
+	-webkit-border-image: url(../images/phone-menu-button-tall.png) 0 25 210 25 !important;
+	-webkit-box-sizing: border-box;
+	border-width: 0px 25px 0px 25px;
+	box-sizing: border-box;
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	z-index:100;
+}
+
+.vc-fixed-bottom {
+ 	position: fixed;
+	bottom: 5px;
+	width: 100%;
+	z-index: 50000;
+}
+
+.white {color:#fff;}

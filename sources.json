@@ -1,0 +1,74 @@
+[
+    {"source": "app/assistants/app-assistant.js"},
+    {"source": "frameworks/voogle.framework.js"},
+    {"source": "app/assistants/utils/oauth.js"},
+    {"source": "frameworks/kandutech.cookies.js"},
+    {"source": "app/assistants/connecting-assistant.js"},
+    {"source": "app/models/metrix.js"},
+    {"source": "app/models/asyncWrappers.js"},
+    {"source": "frameworks/jq.js"},
+    {
+        "scenes": "setupWizard1",
+        "source": "app/assistants/setupWizard1-assistant.js"
+    },
+    {
+        "scenes": "dashboard",
+        "source": "app/assistants/dashboard-assistant.js"
+    },
+    {
+        "scenes": "inbox",
+        "source": "app/assistants/inbox-assistant.js"
+    },
+    {
+        "scenes": "setupWizard2",
+        "source": "app/assistants/setupWizard2-assistant.js"
+    },
+    {
+        "scenes": "setupWizard3",
+        "source": "app/assistants/setupWizard3-assistant.js"
+    },
+    {
+        "scenes": "setupWizard4",
+        "source": "app/assistants/setupWizard4-assistant.js"
+    },
+    {
+        "scenes": "setupWizard5",
+        "source": "app/assistants/setupWizard5-assistant.js"
+    },
+    {
+        "scenes": "setupWizard6",
+        "source": "app/assistants/setupWizard6-assistant.js"
+    },
+    {
+        "scenes": "dialer",
+        "source": "app/assistants/dialer-assistant.js"
+    },
+    {
+        "scenes": "directory",
+        "source": "app/assistants/directory-assistant.js"
+    },
+    {
+        "scenes": "newTxt",
+        "source": "app/assistants/newTxt-assistant.js"
+    },
+    {
+        "scenes": "smsRead",
+        "source": "app/assistants/smsRead-assistant.js"
+    },
+    {
+        "scenes": "voicemailRead",
+        "source": "app/assistants/voicemailRead-assistant.js"
+    },
+    {
+        "scenes": "recordedRead",
+        "source": "app/assistants/recordedRead-assistant.js"
+    },
+    {
+        "scenes": "preferences",
+        "source": "app/assistants/preferences-assistant.js"
+    },
+    {
+        "scenes": "oauth",
+        "source": "app/assistants/oauth-assistant.js"
+    }
+]

@@ -1,0 +1,260 @@
+/*!
+ *  Phone
+ *  Call Log
+ *  Copyright (c) 2007-2009, Palm Inc.
+ *  All rights reserved.
+ */
+ 
+/* Generic Call Log Styles */
+
+span.truncating-text {
+  display: block;
+}
+
+/* partial workaround for NOV-88871 */
+div[name='topSpacer'], div[name='bottomSpacer'] {
+	background-color: transparent !important;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.calllog-scene .palm-row.multi-line {
+    min-height: 71px;
+}
+
+/*Prevent palm-rows inside drawers to get selected styling*/
+.palm-dark .palm-row.selected .palm-drawer-contents .title {
+    color: #fff;
+}
+
+#calllog_list {
+	width: 100%;
+}
+
+.view-menu > .palm-menu-fade {
+    background: url(../images/call-log-view-menu-bg.png) left top no-repeat;
+}
+
+.calllog-scene .palm-menu-text div {
+    margin-right: -18px;
+    margin-left: -18px;  
+}
+
+.calllog-scene .palm-menu-spacer {
+    height: 0 !important;
+}
+
+#calllog_list_missed > .palm-list,
+#calllog_list > .palm-list {
+    padding: 50px 0;
+}
+
+#calllog_list .palm-list .row,
+#conference_member_list .palm-list .palm-row {
+	background: url(../images/call-log-list-separator.png) bottom left repeat-x;
+}
+
+.call-log-info {
+	width: 40px;
+	height: 40px;
+	float: right;
+	position: relative;
+	margin: 10px 7px 0px 0px;
+}
+
+.title.missed {
+	font-weight: bold;
+}
+
+.voicemail-details,
+.calllogdetails {
+    clear: both;
+}
+
+.call-log-avatar-wrapper {
+    position: relative;
+    float: right;
+}
+
+.call-log-list-pic {
+    float: right;
+    -webkit-border-radius: 6px 0 0 6px;
+    margin: 8px 29px 0px 15px;    
+}
+
+.palm-row .contact-title {
+    font-size: 18px;
+    color: #CCCCCC;
+}
+
+.call-log-avatar-frame {
+    float: right;
+    position: relative;
+    border: solid transparent;
+    border-width: 4px 10px 6px 0px;
+    margin-top: 1px;
+    margin-right: -94px;
+    width: 72px;
+	height: 60px;
+	background: url(../images/avatar-disclosure.png) left 0px no-repeat;
+	-webkit-background-clip: padding;
+}
+
+.call-log-avatar-frame.selected { background-position: left -60px; }
+.open .call-log-avatar-frame { background-position: left -120px; }
+.open .call-log-avatar-frame.selected { background-position: left -180px; }
+
+.call-count {
+    pointer-events: none;
+    height: 30px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 15px;
+    position: absolute;
+    left: -11px;
+    top: -3px;
+    -webkit-border-image: url(../images/call-log-count-pill.png) 0 15 0 15;
+    border-width: 0 15px 0 15px;
+    z-index: 1;
+}
+
+.call-count-wrapper {
+    pointer-events: none;
+    margin: 0px -4px 0px -4px;
+    line-height: 25px;
+}
+
+.play-badge .call-count-wrapper {
+  margin: 0 -10px;
+}
+
+.voicemail > .call-count {
+    left: auto;
+    right: -18px;
+    top: -16px;
+}
+
+.call-count-wrapper > img {
+  display: none;
+}
+
+.play-badge .call-count-wrapper > img {
+  display: inline;
+  margin: 7px 0 0 5px;
+}
+
+.palm-row.call-log-details-row {
+    line-height: 29px;
+    color: #AAAAAA;
+    min-height: 0px;
+}
+
+.deduped-calls {
+    padding: 0 14px;
+    font-size: 15px;
+}
+
+.time-type {
+    float: right; 
+}
+
+.call-log-details-item .truncating-text {
+    font-size: 15px;
+}
+
+.call-log-details-item > p > span {
+    color: #FFFFFF;
+    min-width: 18px;
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+	  text-transform: uppercase;    
+}
+
+.call-log-icon {
+	float: right;
+    margin-top: 12px;
+}
+
+.type-icon {
+    float: left;
+    margin: 3px 5px 0px 0px;
+}
+
+.call-log-icon,
+.type-icon {
+    width: 24px;
+	height: 24px;
+    background: url(../images/call-log-list-sprite.png) -148px 0px no-repeat;
+}
+
+.type-icon.incoming,
+.call-log-icon.incoming { background-position: -148px -24px; }
+.type-icon.outgoing,
+.call-log-icon.outgoing { background-position: -148px -48px; }
+.type-icon.ignored,
+.call-log-icon.ignored { background-position: -148px -72px; }
+
+.call-log-sms {
+    float: right;
+    border: solid transparent;
+    border-width: 6px 13px 0 0;
+    width: 41px;
+    height: 41px;
+    background: url(../images/button-sprite.png) -82px 0px no-repeat;
+    -webkit-background-clip: padding;
+}            
+
+.call-log-sms.selected { background-position: -82px -41px; }
+
+.call-log-label {
+    color: #AAAAAA;
+    float: right;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-right: 6px;
+    line-height: 51px;    
+}
+
+.voicemail-details .palm-row .title,
+.call-log-details-row .palm-row .title {
+    padding-top: 13px;
+    padding-right: 14px;
+    padding-bottom: 15px;
+}
+
+.palm-dark .palm-drawer-container {
+    -webkit-border-image: url(../images/framework/palm-drawer-background-dark.png) 20 1 20 1 repeat repeat;
+}
+
+/*
+ * Empty Calllog Styles
+ */
+
+.empty-main {
+	padding-top: 80px;
+}
+
+.large-empty-icon {
+    width: 120px;
+	height: 120px;
+	margin: 0px auto;
+    background-repeat: no-repeat;
+}
+
+.large-empty-icon.phone {
+    background-image: url(../images/empty-calllog-phone.png);
+    margin-top: -50px;
+}
+
+.large-empty-icon.voicemail { background-image: url(../images/empty-voicemail.png); }
+
+.empty-text {
+	text-align: center;
+	margin-top: 10px;
+	font-size: 16px;
+	color: #FFFFFF;
+}

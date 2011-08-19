@@ -1,0 +1,133 @@
+/* dial pad version of the glass */
+
+.keypad-dtmf {
+		text-align: center;
+		color: white;
+		padding: 0;
+		width: 320px;
+		height: 322px;
+		margin: 0 0 0 0;
+}
+
+
+.keypad-dtmf .keypad-row {
+		width: 320px;
+		max-height: 70px;
+		clear: both;
+		margin: 0;
+		padding: 0;
+}
+
+.keypad-dtmf .keypad-row .key {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		float: left;
+}
+
+.keypad-dtmf .key.glassbutton {
+		background: transparent;
+		margin: 0;
+		padding: 0;
+		
+}
+
+.keypad-dtmf .glassbutton {
+		border: none;
+		outline: none;
+		margin: 0;
+		padding: 0;
+		width: 105px;
+}
+
+/* DTMF Keypad Keys */
+
+.keypad-dtmf .key.glassbutton.two,
+.keypad-dtmf .key.glassbutton.five,
+.keypad-dtmf .key.glassbutton.eight,
+.keypad-dtmf .key.glassbutton.zero {
+		width: 109px;
+}
+
+.keypad-dtmf .key.glassbutton {
+		height: 57px;
+		background-repeat: no-repeat;
+		background: url(../images/dialpad-dtmf.png);
+}
+
+.keypad-dtmf .key.glassbutton.one 			{ background-position: 0px 0px; }
+.keypad-dtmf .key.glassbutton.one.selected 	{ background-position: 0px -57px; }
+
+.keypad-dtmf .key.glassbutton.two 			{ background-position: -105px 0px; }
+.keypad-dtmf .key.glassbutton.two.selected    { background-position: -105px -57px; }
+
+.keypad-dtmf .key.glassbutton.three 	    { background-position: -214px 0px; }
+.keypad-dtmf .key.glassbutton.three.selected  { background-position: -214px -57px; }
+
+.keypad-dtmf .key.glassbutton.four 			{ background-position: 0px -114px; }
+.keypad-dtmf .key.glassbutton.four.selected  	{ background-position: 0px -171px; }
+
+.keypad-dtmf .key.glassbutton.five 			{ background-position: -105px -114px; }
+.keypad-dtmf .key.glassbutton.five.selected 	{ background-position: -105px -171px; }
+
+.keypad-dtmf .key.glassbutton.six 			{ background-position: -214px -114px; }
+.keypad-dtmf .key.glassbutton.six.selected 	{ background-position: -214px -171px; }
+
+.keypad-dtmf .key.glassbutton.seven 			{ background-position: 0px -228px; }
+.keypad-dtmf .key.glassbutton.seven.selected 	{ background-position: 0px -285px; }
+
+.keypad-dtmf .key.glassbutton.eight 			{ background-position: -105px -228px; }
+.keypad-dtmf .key.glassbutton.eight.selected 	{ background-position: -105px -285px; }
+
+.keypad-dtmf .key.glassbutton.nine 			{ background-position: -214px -228px; }
+.keypad-dtmf .key.glassbutton.nine.selected 	{ background-position: -214px -285px; }
+
+.keypad-dtmf .key.glassbutton.star 			{ background-position: 0px -342px; }
+.keypad-dtmf .key.glassbutton.star.selected 	{ background-position: 0px -399px; }
+
+.keypad-dtmf .key.glassbutton.zero 			{ background-position: -105px -342px; }
+.keypad-dtmf .key.glassbutton.zero.selected	{ background-position: -105px -399px; }
+
+.keypad-dtmf .key.glassbutton.pound			{ background-position: -214px -342px; }
+.keypad-dtmf .key.glassbutton.pound.selected	{ background-position: -214px -399px; }
+
+
+/* dtmf pad input field */
+
+.glass-panel.dtmfpad .input-field {
+		height: 26px;
+		top: -26px;
+}
+
+.glass-panel.dtmfpad .input-field .text-input {
+		height: 26px;
+		font-size: 24px;
+		line-height: 26px;
+		width: 300px;
+		padding: 0 10px;
+}
+
+.glass-panel.dtmfpad .input-field {
+		height: 29px;
+}
+
+.glass-panel.dtmfpad div.keypad {
+		margin: 0;
+		height: 292px;
+}
+
+.activecall-name {
+		background: url(../images/dialpad-dtmf.png) 0px -456px;
+		padding: 0 10px;
+		height: 32px;
+		margin-top: 28px;
+		text-align: center;
+		color: #fff;
+		line-height: 35px;
+		font-size: 16px;
+}
+
+.text-hidden {
+	font-size:0px; 
+	opacity: 0;
+}

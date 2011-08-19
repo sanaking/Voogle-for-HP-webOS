@@ -1,0 +1,32 @@
+<!--
+/*
+ * Voogle2
+ * Version 2.x of Voogle
+ * Copyright 2011 - C2 Partners, LLC. DBA kandutech
+ * THIS SOURCE CODE MAY NOT BE DISTRBUTED IN ANY WAY WITHOUT PERMISSION FROM C2 PARTNERS, LCC. DBA KANDUTECH.
+ * DISTRIBUTING THIS SOURCE CODE WILL RESULT IN PROMPT LEGAL ACTION.
+ * DEVELOPED BY: CONNOR LACOMBE & THE KANDUTECH TEAM.
+ * FOR CONTACT INFORMATION VISIT: HTTP://KANDUTECH.COM
+ */
+-->
+<div class="appBackground"></div>
+<div class="appHeader">
+	Setup Wizard
+</div>
+<div class="appContent">
+	<div class="description">
+		Select your current device's number below.
+	</div>
+	<div class="loginForm">
+		<div style="width:128px; height:128px; margin-left:auto; margin-right:auto; margin-top:5px;" x-mojo-element="Spinner" id="phoneLoader"></div>
+		<div class="errorText" id="errorMsg">You don't have any numbers associated with your Google Voice account. Please tap &quot;Skip&quot;.</div>
+		
+	<div x-mojo-element="Button" id="cont" style="width:220px; margin-left:auto; margin-right:auto;"></div>
+	</div>
+	<div x-mojo-element="Scroller" id="scroller" style="height:67%; position:fixed; top:90px; width:320px;">
+        <div class="palm-group">
+            <div class="palm-group-title">Phones</div>
+            <div x-mojo-element="List" class="palm-list" id="phoneList"></div>
+        </div>
+    </div>
+</div>

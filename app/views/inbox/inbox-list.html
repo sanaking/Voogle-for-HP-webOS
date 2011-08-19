@@ -1,0 +1,9 @@
+<div class="leftMessage" onmousedown="list_down(this);" onmouseup="list_up(this);" onmouseout="list_up(this);" onmousemove="list_up(this);" id="msg_#{-id}">
+     	<img src="images/ui/#{-type}.png" width="16" height="16" style="position:absolute; margin-top:5px;" />
+		<div style=" height:30px; width:30px; position:absolute; margin-top:23px; z-index:33455;" id="toStar_#{-num}" onclick="star(this);">
+        	<img src="images/ui/unactive_star.png" style="" id="star_#{-num}" />
+		</div>
+       	<div style="font-size:18px; margin-left:25px;" class="truncating-text">#{-name}</div>
+        <img src="images/ui/unreadDot.png" style="float:right; display:none; margin-top:-20px;" id="unread_#{-num}" />
+		<div style="font-size:14px; margin-left:25px; margin-bottom:5px;" class="truncating-text">#{-body}</div>
+</div>

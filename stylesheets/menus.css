@@ -1,0 +1,30 @@
+
+
+/*
+ * Framework menu-group overrides
+ */
+ 
+.palm-menu-group .palm-menu-button,
+.palm-menu-group .palm-menu-text { -webkit-border-image: url(../images/framework/palm-menu-segment-middle.png) 0 25 200 25 repeat repeat; }
+.palm-menu-group .palm-menu-button:first-child,
+.palm-menu-group .palm-menu-text:first-child { -webkit-border-image: url(../images/framework/palm-menu-segment-first.png) 0 25 200 25 repeat repeat; }
+.palm-menu-group .palm-menu-button:last-child,
+.palm-menu-group .palm-menu-text:last-child { -webkit-border-image: url(../images/framework/palm-menu-segment-last.png) 0 25 200 25 repeat repeat; }
+.palm-menu-group .palm-menu-button.selected,
+.palm-menu-group .palm-menu-text.selected { -webkit-border-image: url(../images/framework/palm-menu-segment-middle.png) 50 25 150 25 repeat repeat; }
+.palm-menu-group .palm-menu-button.selected:first-child,
+.palm-menu-group .palm-menu-text.selected:first-child { -webkit-border-image: url(../images/framework/palm-menu-segment-first.png) 50 25 150 25 repeat repeat; }
+.palm-menu-group .palm-menu-button.selected:last-child,
+.palm-menu-group .palm-menu-text.selected:last-child { -webkit-border-image: url(../images/framework/palm-menu-segment-last.png) 50 25 150 25 repeat repeat; }
+.palm-menu-group .palm-menu-button.palm-depressed,
+.palm-menu-group .palm-menu-text.palm-depressed { -webkit-border-image: url(../images/framework/palm-menu-segment-middle.png) 100 25 100 25 repeat repeat; }
+.palm-menu-group .palm-menu-button.palm-depressed:first-child,
+.palm-menu-group .palm-menu-text.palm-depressed:first-child { -webkit-border-image: url(../images/framework/palm-menu-segment-first.png) 100 25 100 25 repeat repeat; }
+.palm-menu-group .palm-menu-button.palm-depressed:last-child,
+.palm-menu-group .palm-menu-text.palm-depressed:last-child { -webkit-border-image: url(../images/framework/palm-menu-segment-last.png) 100 25 100 25 repeat repeat; }
+.palm-menu-group .palm-menu-button.selected.palm-depressed,
+.palm-menu-group .palm-menu-text.selected.palm-depressed { -webkit-border-image: url(../images/framework/palm-menu-segment-middle.png) 150 25 50 25 repeat repeat; }
+.palm-menu-group .palm-menu-button.selected.palm-depressed:first-child,
+.palm-menu-group .palm-menu-text.selected.palm-depressed:first-child { -webkit-border-image: url(../images/framework/palm-menu-segment-first.png) 150 25 50 25 repeat repeat; }
+.palm-menu-group .palm-menu-button.selected.palm-depressed:last-child,
+.palm-menu-group .palm-menu-text.selected.palm-depressed:last-child { -webkit-border-image: url(../images/framework/palm-menu-segment-last.png) 150 25 50 25 repeat repeat; }

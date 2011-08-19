@@ -1,0 +1,241 @@
+/*
+ * Voogle Stylesheet
+ * FOR PUBLIC USE
+ */
+
+.appHeader {
+	background-image:url(../images/ui/header.png);
+	background-repeat:no-repeat;
+	position:fixed;
+	top:0;
+	left:0;
+	width:320px;
+	height:42px;
+	color:white;
+	text-align:center;
+	font-size:22px;
+	font-weight:bold;
+	padding-top:8px;
+	z-index:55;
+	
+}
+
+.dialPadButton {
+	float:left;
+	width:106px;
+	height:60px;
+	color:#6c6c6c;
+	background-image: url(../images/ui/dialPadButton.png);
+	text-align:center;
+	font-size:40px;
+}
+
+.dialPadButtonN {
+	float:left;
+	width:106px;
+	height:60px;
+	color:#6c6c6c;
+	background-image: url(../images/ui/dialPadButton.png);
+	text-align:center;
+	font-size:40px;
+}
+
+.dialPadButton_addContact {
+	float:left;
+	width:106px;
+	height:60px;
+	color:#6c6c6c;
+	background-image: url(../images/ui/addContact.png);
+	text-align:center;
+	font-size:40px;
+}
+
+.dialPadButton_addContact:active {
+	background-position:bottom center;
+}
+
+.dialPadButton_placeCall {
+	float:left;
+	width:106px;
+	height:60px;
+	color:#6c6c6c;
+	background-image: url(../images/ui/placeCall.png);
+	text-align:center;
+	font-size:40px;
+}
+
+.dialPadButton_placeCall:active {
+	background-position:bottom center;
+}
+
+.dialPadButton:active {
+	background-image: url(../images/ui/dialPadButton_dow.png);
+}
+
+.folderTitle {
+	background-image:url(../images/ui/folderTitle.png);
+	width:200px;
+	height:30px;
+	margin-left:auto;
+	margin-right:auto;
+	text-overflow:ellipsis;
+}
+
+.titlea {
+	width:200px;
+	height:30px;
+	margin-left:auto;
+	margin-right:auto;
+	text-overflow:ellipsis;
+}
+
+.folderTitle:active {
+	background-image:url(../images/ui/folderTitle.png);
+	background-position:bottom center;
+	width:200px;
+	height:30px;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+
+.popupWidth {
+	width:190px;
+}
+
+.headerRefresh {
+	background-image:url(../images/ui/headerRefresh.png);
+	background-position:top center;
+	width:50px;
+	height:35px;
+	position:absolute;
+	right:2px;
+	top:8px;
+}
+
+.headerCall:active {
+	background-position:bottom center;
+}
+
+.headerCall {
+	background-image:url(../images/ui/headerCall.png);
+	background-position:top center;
+	width:50px;
+	height:35px;
+	position:absolute;
+	right:2px;
+	z-index:234345656;
+	top:8px;
+}
+
+.headerRefresh:active {
+	background-position:bottom center;
+}
+
+.headerBackspace {
+	background-image:url(../images/ui/backspace.png);
+	background-position:top center;
+	width:50px;
+	height:35px;
+	position:absolute;
+	right:2px;
+	top:8px;
+}
+
+.headerBackspace:active {
+	background-position:bottom center;
+}
+
+.leftMessage { 
+	color:black;
+	border-bottom:#e0e0e0 solid 1px;
+	min-height:40px;
+	background-color:#f3f5fc;
+	width:310px;
+	padding-left:5px;
+	padding-right:5px;
+}
+
+.fromMessage { 
+	border-width: 10px;
+	-webkit-border-image: url(../images/chat-balloon-right.png) 10 10 10 10 stretch stretch;
+	color:black;
+	margin-bottom:5px;
+	min-height:20px;
+	vertical-align:middle;
+}
+
+.leftMessageAct {
+	color:white;
+	border-bottom:#e0e0e0 solid 1px;
+	background-image:url(../images/ui/msgSelected.png);
+	min-height:40px;
+	background-color:#f3f5fc;
+	width:310px;
+	padding-left:5px;
+	padding-right:5px;
+}
+
+.rightMessage { 
+	border-width: 10px;
+	-webkit-border-image: url(../images/chat-balloon-left.png) 10 10 10 10 stretch stretch;
+	color:black;
+	margin-bottom:5px;
+	min-height:20px;
+	vertical-align:middle;
+}
+
+.appBackground {
+	background-color:#f3f5fc;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	position:fixed;
+	z-index:-1;
+}
+
+.appContent {
+	height:89%;
+	width:100%;
+	top:50px;
+	position:fixed;
+	color:black;
+}
+
+.appContent .description {
+	color:#1445ae;
+	font-size:15px;
+	width:300px;
+	text-align:center;
+	margin-top:5px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.appContent .loginForm .errorText {
+	color:red;
+	font-size:small;
+	visibility:hidden;
+	text-align:center;
+}
+
+.appContent .loginForm {
+	margin-top:20px;
+	width:300px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.welcome {
+	color:#1445ae;
+	font-size:15px;
+	width:300px;
+	text-align:center;
+	font-size:30px;
+	position:absolute;
+	top:50%;
+	margin-top:-90px;
+	left:50%;
+	margin-left:-150px;
+}

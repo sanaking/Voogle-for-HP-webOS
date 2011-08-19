@@ -1,0 +1,368 @@
+/*!
+ *  Phone
+ *  Copyright (c) 2007-2009, Palm Inc.
+ *  All rights reserved.
+ */
+
+@import url(dialpad.css);
+
+@import url(menus.css);
+
+@import url(active-call.css);
+
+@import url(dtmfpad.css);
+
+@import url(notification.css);
+
+@import url(call-log.css);
+
+@import url(address-picker.css);
+
+@import url(pinpad.css);
+
+@import url(voicecommand.css);
+
+body.palm-default {
+	background-image: url(../images/backdrop-phone.png);
+}
+
+body.no-wallpaper {
+	background: rgb(228, 228, 226);
+}
+
+.firstuse {
+	background-image: url(/usr/palm/applications/com.palm.app.firstuse/images/background.png);
+}
+
+.glass-wrapper {
+    position: fixed;
+    top: 0px;
+    bottom: 72px;
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+
+.SetPassword-scene .glass-wrapper {
+    bottom: 47px;
+}
+
+.glass-background {
+    -webkit-border-image: url(../images/glass-tile.png) 146 0 146 0 repeat repeat;
+    border-width: 146px 0px;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    position: absolute;
+}
+
+.button-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.firstuse .scene-title {
+    background: url(../images/list-separator260.png) no-repeat 50% 100%;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.SetPassword-scene,
+.password-scene {
+    height: 100%;
+}
+
+.passwordhint {
+    margin: 0px 12px;
+}
+
+.content-wrapper {
+    margin: 9px 6px 0px;
+    color: #fff;
+    font-size: 16px;
+    height: 100%;
+}
+
+.scroll-fade-top,
+.scroll-fade-bottom {
+    position: absolute;
+    height: 40px;
+    width: 100%;
+    z-index: 1000; /* Match framework z-index for .hint-text */
+}
+
+.scroll-fade-top {
+    top: 0;
+    background: url(../images/glass-fade-top.png) center top no-repeat;
+}
+
+.scroll-fade-bottom {
+    bottom: 0;
+    background: url(../images/glass-fade-bottom.png) center top no-repeat;
+}
+
+.palm-menu.command-menu.blue-fade > .palm-menu-fade {
+    background: url(../images/command-menu-fade.png) left top no-repeat;
+}
+
+/* Dashboard icons */
+
+.palm-dashboard-icon.missed {
+	background: url(../images/notification-large-missed.png) center left no-repeat;
+}
+
+.palm-dashboard-icon.voicemail {
+	background: url(../images/notification-large-voicemail.png) center left no-repeat;
+}
+
+.palm-dashboard-icon.answer {
+	background: url(../images/notification-large-answer.png) center left no-repeat;
+}
+
+.calllog-scene .palm-row-wrapper,
+.voicemail-scene .palm-row-wrapper {
+    overflow: hidden;
+}
+
+/**
+ * Framework overrides
+ */
+ 
+.palm-dark .palm-list-section-label .left {
+	background: url(../images/list-section-line.png) right no-repeat;
+}
+
+.palm-dark .palm-list-section-label .label {
+	color: #CCCCCC;
+}
+
+.palm-dark .palm-list-section-label .right {
+	background: url(../images/list-section-line.png) left no-repeat;
+}
+
+.palm-dark .palm-divider .label {
+    color: #FFFFFF;
+}
+
+.palm-row.multi-line .title {
+    padding-right: 0px;
+}
+
+.palm-row .subtitle {
+	font-size: 15px;
+    color: #C2C9CF;
+    margin-top: -4px;
+    padding-right: 0px;
+}
+
+.favorites-star {
+    vertical-align: top;
+    padding-left: 3px;
+}
+
+.palm-row .title.favorite-truncated {
+    padding-right: 24px;
+    background: url(../images/icon-fav-list-light.png) right 9px no-repeat;
+}
+
+/**
+ * Voicemail
+ */
+
+.subtitle span {
+    color: #EEEEEE;
+}
+
+.voicemail-icon {
+    height: 14px;
+    width: 24px;
+    float: right;
+    margin-top: 16px;
+    background: url(../images/vm-heard-sprite.png) left top no-repeat;
+}
+
+.voicemail-icon.heard {
+    background-position: left -14px;
+}
+
+.voicemail-time,
+.voicemail-duration {
+    color: #CCCCCC;
+}
+
+.voicemail-drawer-button {
+    width: 41px;
+    height: 41px;
+    border: solid transparent;
+    border-width: 10px 13px;
+    background: url(../images/button-sprite.png) left top no-repeat;
+    -webkit-background-clip: padding;
+    
+    /* Stack on top of slider button */
+    position: relative;
+    z-index: 1001;
+}
+.voicemail-drawer-button.selected { background-position-y: -41px; }
+
+.voicemail-greeting .voicemail-drawer-button {
+  background-image: url(../images/button-sprite-light.png);
+}
+
+.voicemail-drawer-button.playpause {
+    float: left;
+    background-position-x: -41px;
+    border-right-width: 0px;
+}
+.voicemail-drawer-button.paused { background-position-y: -82px; }
+.paused.selected { background-position-y: -123px; }
+
+.voicemail-drawer-button.source {
+    float: right;
+    border-left-width: 0px;
+}
+
+.voicemail-drawer-button.speakerphone { background-position-y: -82px; }
+.speakerphone.selected { background-position-y: -123px; }
+
+.title.vvm-password-message { font-size: 16px; }
+.vvm-password-img { vertical-align: bottom; }
+
+/* Contain floats */
+.voicemail-container,
+.voicemail-slider { overflow: hidden; }
+
+/* Show top 1px of background image usually hidden in palm-rows */
+.voicemail-container { margin-top: 0px; }
+
+/* FRAMEWORK OVERRIDE */
+.palm-slider-background {
+    width: auto;
+    margin: 28px 22px 0px;
+}
+
+.voicemail-details .palm-drawer-container:first-child {
+    -webkit-border-image: none;
+}
+
+.voicemail-details .palm-drawer-container:first-child > .palm-drawer-contents {
+    margin: 0px;
+}
+
+.icon.voicemail {
+  background: url(../images/voicemail-icon.png) center center no-repeat;
+}
+
+.footer-button-container {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 110px;
+  width: 100%;
+  background: url(../images/voicemail-footer-shadow.png) top left repeat-x;
+}
+
+.footer-button-container > div {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.voicemail-greeting .palm-body-text {
+  font-size: 18px;
+  padding-top: 10px;
+  color: #747474;
+}
+
+/*
+ *  Favorites
+ */
+
+.favorites-details {
+	margin-right: 6px;
+	margin-left: 3px;
+	clear: both;
+}
+
+.favorites-details .title.truncating-text {
+	line-height: 35px;
+	padding-left: 8px;
+}
+
+.favorites-details .palm-row {
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+.favorites-details .call-log-sms { border-right-width: 3px; }
+
+.favorites-details .palm-drawer-container {
+	border-width: 0px 17px 17px;
+	-webkit-border-image: url(../images/row-glass-down.png) 17 17 17 17 repeat repeat;
+}
+
+.favorites-details .palm-drawer-contents {
+	margin: 0px -18px -18px;
+}
+
+.favorites-list { padding-top: 2px; }
+.favorites-list .list-item-add-button { display: none; }
+.favorites-list .call-log-avatar-frame { border-bottom-width: 0px; }
+
+.favorites-list .add-item .title {
+	color: white;
+	font-style: italic;
+	padding-top: 17px;
+	padding-bottom: 19px;
+}
+
+.favorites-list .add-item,
+.favorites-list .palm-list-container > .palm-row,
+.favorites-list .palm-list-container:first-child > .palm-row:first-child,
+.favorites-list .palm-list-container:only-child > .palm-row:only-child {
+	border-width: 20px 17px;
+	background: none;
+	-webkit-border-image: url(../images/row-glass-up.png) 20 17 20 17 repeat repeat;
+	margin: 0px 9px 0 9px;
+}
+
+.favorites-list .add-item.selected,
+.favorites-list .palm-list-container > .palm-row.selected,
+.favorites-list .palm-list-container:first-child > .palm-row.selected,
+.favorites-list .palm-list-container:only-child > .palm-row.selected {
+	border-width: 20px 17px; /* Keep the border around for the add-item row */
+	-webkit-border-image: url(../images/row-glass-down.png) 20 17 20 17 repeat repeat;
+}
+
+.favorites-list .add-item .palm-row-wrapper,
+.favorites-list .palm-list-container > .palm-row > .palm-row-wrapper,
+.favorites-list .palm-list-container > .selected > .palm-row-wrapper,
+.favorites-list .palm-list-container > .palm-delete-element > .palm-row-wrapper,
+.favorites-list .palm-list-container > .palm-swipe-delete > .palm-row-wrapper {
+	margin: -19px -24px -16px -21px;
+	overflow: hidden;
+}
+
+/*Actual row that moves with finger*/
+.palm-dark .favorites-list .palm-row.palm-delete-element,
+.palm-dark .favorites-list .palm-row.palm-reorder-element {
+	border-width: 20px 17px;
+	background: inherit;
+	-webkit-border-image: url(../images/palm-delete-element.png) 20 17 20 17 repeat repeat;
+	height: 70px !important;
+	width: 302px !important;
+	z-index: 1;
+}
+
+/*Contextual options below row that moves*/
+.palm-dark .favorites-list .palm-row.palm-swipe-delete {
+  background: none;
+  -webkit-border-image: url(../images/empty.png) 24 20 24 20 repeat repeat;
+}
+
+.palm-dark .favorites-list .palm-drag-spacer {
+  -webkit-border-image: url(../images/empty.png) 15 15 15 15 repeat repeat;
+}

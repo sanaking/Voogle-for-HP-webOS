@@ -1,0 +1,13 @@
+{
+	"id": "com.kandutech.voogle",
+	"version": "2.1.3",
+	"vendor": "kandutech",
+	"type": "web",
+	"main": "index.html",
+	"title": "Voogle",
+	"icon": "icon.png",
+	"splashicon": "images/transparent_pixel.png",
+	"splashBackground": "splash.png",
+	"noWindow": "true"
+	
+}

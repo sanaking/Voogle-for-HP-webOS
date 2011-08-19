@@ -1,0 +1,734 @@
+/*!
+ *  Phone
+ *  Active Call
+ *  Copyright (c) 2007-2009, Palm Inc.
+ *  All rights reserved.
+ */
+
+/* General Dialpad glass */
+
+.glass-panel {
+		position: relative;
+		width: 320px;
+		margin: 0;
+		padding: 0;
+		top: 0px;
+		left: 0px;
+}
+
+.glass-panel.fullscreen-pic {
+    bottom: 70px;
+    left: auto;
+    position: absolute;
+}
+
+.glass-panel.half-panel_0 {
+		margin: 0; 		
+}
+
+.glass-panel.half-panel_1 {
+		margin: 0; 		
+}
+
+.glass-panel.half-panel_0 .keypad,
+.glass-panel.half-panel_1 .keypad {
+		height: 49px;
+}
+
+.glass-panel .input-field {
+    width: 320px;
+    height: 53px;
+    position: absolute;
+    top: -50px;
+    z-index: 1;
+    padding-top: 5px;
+}
+
+.glass-panel.active-call .input-field {
+    background: url(../images/glass-panel.png) top left no-repeat;
+    height: 45px;
+}
+                
+.conf-cdma .glass-panel .input-field,
+.conf-gsm .glass-panel .input-field {
+    height: 50px;
+    top: -55px;
+}
+
+.glass-panel.fullscreen-pic .input-field {
+	  background: url(../images/active-call-sprite.png) top left no-repeat;
+    top: auto;
+    height: 61px;                  
+}
+
+.glass-panel.active-call .input-field .truncating-text {
+		min-height: 24px;
+}
+
+.glass-panel.active-call .display-label {
+		text-transform: uppercase;
+		font-size: 16px;
+}
+
+.half-panel_0 .display-label,
+.half-panel_1 .display-label {
+    line-height: 12px;
+}
+
+.glass-panel.active-call .display-label span {
+		color: #999;
+		font-size: 14px;
+}
+
+.fullscreen-pic.active-call .display-label span {
+    color: #FFF;
+}
+
+.glass-panel.conference-call .input-field {
+		background: url(../images/glass-panel.png) top left no-repeat;
+		margin-top: 2px;
+		height: 53px;
+}
+
+.input-field.dialing div {
+		border: none;
+		padding: 10px 0 0 0;
+		margin: 0;
+		outline: none;
+		background: none;
+		color: #fff;
+		line-height: 67px;
+		font-size: 30px;
+		text-shadow: #bbb 0px 0px 4px;
+		width: 250px;
+		text-align: right;
+		-webkit-user-drag: none;
+}
+
+.input-name {
+		width: 320px;
+		text-align: center;
+		color: #fff;
+		font-size: 24px;
+}
+
+.input-time {
+    position: absolute;
+    bottom: 3px;    
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+}
+
+.conf-gsm .input-holdstate,
+.conf-gsm .input-time,
+.conf-cdma .input-holdstate,
+.conf-cdma .input-time {
+		position: static;
+		line-height: 14px;
+}
+
+.input-display-label {
+		margin-top: -10px;
+		text-transform: uppercase;
+		font-size: 16px;
+		position: absolute;
+		width: 100%;
+		text-align: center;
+		z-index: 6;
+}
+
+.input-mutestate {
+		font-weight: bold;
+		text-transform: uppercase;
+}
+
+.input-mutestate,
+.input-calltype {
+		padding-right: 5px;
+}
+
+
+.input-holdstate {
+		font-size: 16px;
+		margin-top: 5px;
+		z-index: 30;
+}
+
+.conf-gsm .input-holdstate {
+		margin-top: 0;
+		z-index: auto;
+}
+
+.keypad-activecall {
+		background: url(../images/glass-panel.png) -58px left no-repeat;
+		text-align: center;
+		color: white;
+		padding: 0;
+		width: 320px;
+		position: relative;
+		min-height: 238px;
+		margin-top: 50px;
+}
+
+.fullscreen-pic .keypad-activecall {
+    margin-top: 0px;
+    background-position-y: 0;
+    min-height: 318px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.conf-gsm .keypad-activecall {
+    max-height: 228px !important;
+    min-height: 228px;
+    margin-top: 60px;
+}
+
+.conf-gsm .conf-member-list {
+    width: 310px;
+    margin-left: 5px;  
+}
+
+.keypad-conferencecall {
+	background-image: none;
+	position: fixed;
+	width: 320px;
+	height: 49px;
+	top: 58px;
+	left: 0;
+}
+
+/* save, add, and conference call buttons */
+
+.call-action-icon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: solid transparent;
+	border-width: 5px 14px 10px 2px;
+	width: 32px;
+	height: 32px;
+	background: url(../images/menu-icon-addcontact.png) left top no-repeat;
+	-webkit-background-clip: padding;
+}
+
+.call-action-icon.selected { background-position-y: bottom; }
+.call-action-icon.drop-down { background-image: url(../images/menu-icon-dropdown-arrow.png); }
+
+.glass-panel-button {
+    position: relative;
+    top: 0px;
+    left: 5px;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 10px;
+    background: url(../images/glass-panel-button.png) top left no-repeat;
+    font-size: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.glass-panel-button.selected:not(.inactive) {
+    color: #222222;
+    background-position: bottom left;
+}
+
+.glass-panel-button.inactive {
+    color: #888888;
+}
+
+/* Multi-call buttons */
+
+.multicall-button-container {
+    height: 64px;
+    width: 320px;
+    margin-top: -45px;
+}
+
+.stampsize-pic .multicall-button-container,
+.fullscreen-pic .multicall-button-container {
+    position: absolute;    
+    height: 110px;
+    bottom: 0px;
+}
+
+.stampsize-pic .multicall-button-container {
+    bottom: -65px;
+}
+
+.stampsize-pic .multicall-button-container,
+.fullscreen-pic .multicall-button-container,
+.conf-gsm .multicall-button-container,
+.conf-cdma .multicall-button-container {
+    margin-top: 0;
+}
+
+.half-panel_0 .multicall-button-container,
+.half-panel_1 .multicall-button-container {
+    margin-top: 17px;
+}
+
+.half-panel_0.cdma .multicall-button-container,
+.half-panel_1.cdma .multicall-button-container {
+    margin-top: 12px;
+}
+
+.multicall-disconnect-button,
+.multicall-merge-button,
+.multicall-switch-button,
+.multicall-resume-button {
+    position: absolute;
+    left: 0px;
+    width: 160px;
+    height: 64px;
+    z-index: 7;
+}
+
+.conf-gsm .multicall-disconnect-button,
+.conf-gsm .multicall-merge-button,
+.conf-gsm .multicall-switch-button,
+.conf-gsm .multicall-resume-button {
+    bottom: 0px;
+}
+
+.fullscreen-pic .multicall-resume-button,
+.fullscreen-pic .multicall-disconnect-button {
+    position: static;
+    height: 137px;
+    z-index: auto;
+    float: left;
+}
+
+.cdma.half-panel_0 .multicall-disconnect-button,
+.cdma.half-panel_1 .multicall-disconnect-button,
+.cdma .multicall-merge-button,
+.cdma .multicall-switch-button {
+    width: 320px;
+}
+
+.multicall-resume-button,
+.gsm .multicall-switch-button,
+.gsm .multicall-merge-button {
+    left: 160px;
+}
+
+.multicall-disconnect-button {
+    background: url(../images/multicall-disconnect-button.png) top center no-repeat;
+}
+
+.fullscreen-pic .multicall-disconnect-button {
+    background-image: url(../images/multicall-disconnect-button-tall.png);
+}
+
+.multicall-merge-button {
+    background: url(../images/multicall-merge-button.png) top center no-repeat;
+}
+
+.multicall-switch-button {
+    background: url(../images/multicall-switch-button.png) top center no-repeat;
+}
+
+.multicall-resume-button {
+    background: url(../images/multicall-resume-button.png) top center no-repeat;
+}
+
+.fullscreen-pic .multicall-resume-button {
+    background-image: url(../images/multicall-resume-button-tall.png);
+}
+
+.cdma .multicall-merge-button {
+    background: url(../images/multicall-merge-button-full.png) top center no-repeat;
+}
+
+.cdma .multicall-switch-button {
+    background: url(../images/multicall-switch-button-full.png) top center no-repeat;
+}
+
+.glass-panel.half-panel_0,
+.glass-panel.half-panel_1 {
+		position: relative;
+		height: 175px;
+		margin-top: 2px;
+}
+
+/*.glass-panel.half-panel_0 .input-time,
+.glass-panel.half-panel_1 .input-time {
+        bottom: -6px;
+}*/
+
+.glass-panel.half-panel_0 .input-field,
+.glass-panel.half-panel_1 .input-field {
+		background: url(../images/glass-panel.png) top left no-repeat;
+		top: 0px;
+		left: 0;
+		height: 58px;
+}
+
+.glass-panel.half-panel_0 .multicall-disconnect-button,
+.glass-panel.half-panel_0 .multicall-merge-button,
+.glass-panel.half-panel_0 .multicall-switch-button,
+.glass-panel.half-panel_0 .multicall-resume-button {
+		margin: 0;
+}
+
+.glass-panel.half-panel_1 .multicall-disconnect-button,
+.glass-panel.half-panel_1 .multicall-merge-button,
+.glass-panel.half-panel_1 .multicall-switch-button,
+.glass-panel.half-panel_1 .multicall-resume-button {
+		margin: 0;
+}
+
+.glass-panel.active-call.half-panel_0 .keypad-activecall,
+.glass-panel.active-call.half-panel_1 .keypad-activecall {
+    min-height: 0;
+		height: 48px;
+		margin: 0;
+		top: 63px;
+}
+
+/* Changing height of top and bottom calls for CDMA */
+
+.glass-panel.cdma.active-call.half-panel_0:not(.hold) {
+		height: 115px;
+}
+
+.glass-panel.cdma.active-call.half-panel_0.hold,
+.glass-panel.cdma.active-call.half-panel_1.hold {
+		height: 235px;
+}
+
+.glass-panel.cdma.active-call.half-panel_1:not(.hold) {
+		height: 181px;
+}
+   
+.glass-panel.cdma.active-call.half-panel_1.hold .multicall-switch-button,
+.glass-panel.cdma.active-call.half-panel_0.hold .multicall-switch-button,
+.glass-panel.cdma.active-call.half-panel_0 .multicall-merge-button {
+		bottom: 64px;
+}
+
+.glass-panel.cdma.active-call.half-panel_0:not(.hold) .keypad-activecall,
+.glass-panel.cdma.active-call.half-panel_1:not(.hold) .keypad-activecall {
+		background: url(../images/glass-panel.png) bottom left no-repeat;
+		height: 52px;
+}
+
+.glass-panel.cdma.active-call.half-panel_0 .multicall-disconnect-button {
+		display: none;
+}
+
+.cdma.half-panel_1 .multicall-disconnect-button {
+		position: absolute;
+		width: 320px;
+		height: 68px;
+		bottom: -5px;
+		background: url(../images/multicall-disconnect-button-full-all.png) top center no-repeat;
+		z-index: 7;
+}
+
+.cdma.half-panel_1.hold .multicall-disconnect-button {
+		bottom: -2px;  
+}
+
+.cdma.half-panel_1 .multicall-disconnect-button:active {
+		background-position: center center;
+}
+
+.glass-panel.cdma.active-call.half-panel_1:not(.hold) {
+		margin-top: -67px;
+}
+
+.end-all-calls-text {
+		display: none;
+}
+
+.cdma.half-panel_1 .end-all-calls-text {
+		display: inline;
+		position: absolute;
+		bottom: 3px;
+		color: #999;
+		width: 100%;
+		text-align: center;
+		font-size: 14px;
+		z-index: 8;
+}
+
+.cdma.half-panel_1.hold .end-all-calls-text {
+    bottom: 6px;
+}
+
+.multicall-merge-button:active,
+.multicall-switch-button:active,
+.multicall-resume-button:active,
+.multicall-disconnect-button:active,
+.cdma.half-panel_1 .multicall-disconnect-button:active {
+		background-position: center center;
+}
+
+.multicall-merge-button.disabled,
+.multicall-switch-button.disabled,
+.multicall-resume-button.disabled,
+.multicall-disconnect-button.disabled,
+.cdma.half-panel_1 .multicall-disconnect-button.disabled {
+		background-position: bottom center;
+}
+
+.keypad .palm-list .row {
+		border-bottom-width: 0px !important;
+}
+
+.keypad .palm-list .row .subject {
+		text-align: center;
+		color: #fff;
+}
+
+.conf-button-container {
+  white-space: nowrap;
+  width: 300px;
+}
+
+button.conf-hangup,
+button.conf-extract {
+		width: 160px;
+		height: 48px;
+		outline: none;
+		margin-left: -5px;
+    display: inline-block;
+		border: none;
+		background: url(../images/conf-hangup.png) top left no-repeat;
+}
+
+button.conf-extract {
+		background: url(../images/conf-extract.png) top left no-repeat;
+}
+
+button.conf-extract:active,
+button.conf-hangup:active {
+		background-position: bottom left;
+}
+
+button.conf-extract.disabled,
+button.conf-hangup.disabled, 
+button.conf-extract.disabled:active,
+button.conf-hangup.disabled:active {
+		background-position: center left;
+}
+
+/* scaling the contact picture */
+
+.popupIcon {
+		width: 54px;
+		height: 42px;
+		float: left;
+}
+
+.popupIcon.phone_bluetooth_sco {
+		background: url(../images/menu-popup-bluetooth.png) top left no-repeat;
+}
+
+.popupIcon.phone_back_speaker {
+		background: url(../images/menu-popup-bluetooth-speaker.png) top left no-repeat;
+}
+
+.popupIcon.phone_front_speaker {
+		background: url(../images/menu-popup-bluetooth-internal.png) top left no-repeat;
+}
+
+.popupIcon.phone_headset_mic {
+		background: url(../images/menu-popup-bluetooth-headset.png) top left no-repeat;
+}
+
+.contact-picture {
+		position: absolute;
+		left: 5px;
+		top: 17px;
+		width: 310px;
+		height: 160px;
+}
+
+.fullscreen-pic .contact-picture {
+  overflow: hidden;
+  height: 376px;
+  top: 5px;
+  position: relative;
+  left: auto;
+}
+
+.glass-panel.half-panel_0 .contact-picture-tap-target,
+.glass-panel.half-panel_1 .contact-picture-tap-target {
+		display: none;
+}
+
+.contact-picture img.active-picture-square,
+.contact-picture img.active-picture-portrait, 
+.contact-picture img.active-picture-landscape {
+	position: absolute;
+	-webkit-user-drag: none;
+	clip: rect(0px 310px 376px 0px);
+	border-bottom: 1px solid #000;  
+} 
+
+.contact-picture img.active-picture-square,
+.contact-picture img.active-picture-portrait {
+		width: 310px;
+		min-height: 376px;
+}
+
+.contact-picture img.active-picture-landscape {
+		height: 376px;
+		min-width: 310px;
+}
+
+.bottom-container {
+    width: 308px;
+    height: 45px;
+    border-width: 0px 2px;
+    position: relative;
+    left: 4px;
+    bottom: -1px;
+    pointer-events: none;
+}
+
+.fullscreen-pic.hold .bottom-container {
+    z-index: 2; /* Let bottom container stack on top of input field when call is on hold */
+}
+
+.bottom-container.gradient {
+    -webkit-border-image: url(../images/active-call-bottom-gradient.png) 0 2 0 2 repeat repeat;
+}
+
+.hold .bottom-container.gradient {
+    -webkit-border-image: none;
+}
+
+.contact-picture.stamp-size {
+		top: 30px;
+		width: 176px;
+		height: auto;
+		margin: 0 auto;
+		position: relative;
+}
+
+.active-picture-overlay {
+		display: none;
+}
+
+.contact-picture.stamp-size .active-picture-overlay {
+		display: block;
+		position: absolute;
+}
+
+.contact-picture.stamp-size img.active-picture-square,
+.contact-picture.stamp-size img.active-picture-portrait {
+		width: 170px;
+		min-height: 140px;
+		margin-top: 3px;
+		margin-left: 3px;
+		clip: rect(0 170px 140px 0px);
+		border-top: none;
+		border-bottom: none;
+}
+
+.contact-picture.stamp-size img.active-picture-landscape {
+		height: 140px;
+		min-width: 170px;
+		margin-top: 3px;
+		margin-left: 3px;
+		clip: rect(0 170px 140px 0px);
+		border-top: none;
+		border-bottom: none;
+}
+
+.glass-panel.hold .input-field {
+    background: url(../images/glass-panel-hold.png) top left no-repeat;
+}
+
+.glass-panel.hold.fullscreen-pic .input-field {
+    background-image: url(../images/glass-panel-hold-picture.png);
+    height: auto;
+    top: 0px;
+    bottom: 64px;
+}
+
+.glass-panel.hold .truncating-text,
+.glass-panel.hold .input-name,
+.glass-panel.hold .input-time,
+.glass-panel.hold .input-display-label {
+		opacity: 0.6;
+}
+
+.glass-panel.hold .keypad-activecall {
+		background: url(../images/glass-panel-hold.png) -58px left no-repeat;
+}
+
+.contact-text .truncating-text {
+		padding: 0 45px;
+}
+
+.no-add-contact-icon .contact-text .truncating-text {
+		padding: 0 15px;
+}
+
+/*Conference Call Styling*/
+
+.conf-fade-top {
+  width: 320px;
+  height: 20px;
+  background: url(../images/conf-fade-top.png) center center no-repeat;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+}
+
+.conf-fade-bottom {
+  width: 320px;
+  height: 20px;
+  background: url(../images/conf-fade-bottom.png) center center no-repeat;
+  position: absolute;
+  bottom: 64px;
+  pointer-events: none;
+}
+
+/*Styles for status message from firstuse*/
+
+.firstuse .phone-bottom-corners {
+	position: fixed;
+	display: block;
+	bottom: 24px;
+	height: 23px;
+	width: 320px;
+	background: url(../images/palm-bottom-corners.png) no-repeat;
+    pointer-events: none;
+	z-index: 100001;
+}
+
+.firstuse .phone-banner-container {
+	position: fixed;
+	height: 24px;    
+	width: 320px;
+	background: #000;
+	bottom: 0; 
+	left: 0;           
+    z-index: 98001;
+}
+
+.firstuse .phone-banner-text {
+	color: #FFFFFF;
+	padding-left: 10px;
+	white-space:nowrap;
+}
+
+#target {
+    position: fixed;
+    bottom: 0;
+    z-index: 100002;
+}
+
+.firstuse .glass-panel.fullscreen-pic .input-field {
+    background-position-x: -320px;
+}

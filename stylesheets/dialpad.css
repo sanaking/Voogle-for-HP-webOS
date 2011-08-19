@@ -1,0 +1,362 @@
+/*!
+ *  Phone
+ *  Dial Pad
+ *  Copyright (c) 2007-2009, Palm Inc.
+ *  All rights reserved.
+ */
+
+.palm-scene {
+    width: 100%;
+    height: 100%;
+}
+
+.scene-wrapper {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+}
+
+/* Prevent the dialpad scene from scrolling */
+.palm-menu-group {
+	height: auto;
+}
+
+.scene-wrapper,
+.dialpad-scene {
+    min-height: 424px;
+}
+
+.dialpad-scene > .phone-menu-short {
+    background: none;
+}
+
+.dialpad-scene .palm-menu {
+	/* The command menu should not position itself relative
+	   to the viewport in the dialpad scene. On notifications
+	   it should not cover the dial button. */
+	position: absolute;
+}
+
+
+/* input field */
+
+.input-field input[type=text],
+.input-field .text-input {
+	border: none;
+	width: 250px;
+	padding: 0 50px 0 15px;
+	line-height: 51px;
+	font-size: 30px;
+	outline: none;
+	color: #FFFFFF;
+}
+
+.contact-name {
+	font: 11px/17px;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+}
+
+.text-input.small1 {
+	font-size: 28px;
+}
+
+.text-input.small2 {
+	font-size: 26px;
+}
+
+.text-input.small3 {
+	font-size: 24px;
+}
+
+.text-input.small4 {
+	font-size: 22px;
+}
+
+.text-input.small5 {
+	font-size: 18px;
+}
+
+.text-input.hinttext {
+    color: #B8C7D5;
+    margin-top: 0px;
+    left: auto;
+	font-size: 16px;
+}
+
+.backspace {
+	position: absolute;
+	top: 0px;
+	right: 5px;
+	background: url(../images/dialpad-backspace.png) top center no-repeat;
+	width: 58px;
+	height: 50px;
+	z-index: 6;
+}
+
+.backspace:active {
+	background-position: bottom center;
+}
+
+.lookup {
+	position: absolute;
+	padding: 0 12px 0 4px;
+	right: 0px;
+	top: 0px;
+	width: 32px;
+	height: 53px;
+	background: url(../images/address-contact.png) 4px 50% no-repeat;
+}
+
+/* key pad sizing */
+
+.keypad-letters {
+    margin-top: 3px;
+    font-size: 16px;
+    color: #C2C9CF;
+	position:relative;
+}
+.keypad-digit {
+    -webkit-box-sizing: border-box;
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 30px;
+    color: #FFF;
+	position:relative;
+}
+
+.selected > .keypad-letters {
+    color: #fff;
+}
+
+
+.keypad-flex {
+	width: 320px;
+	position: absolute;
+	top: 48px;
+	bottom: 55px;
+	max-height: 379px;
+	min-height: 226px;
+	z-index: 5;
+}
+
+.keypad-buttons {
+    position: absolute;
+    top: 3px;
+    bottom: 66px;
+}
+
+.menu-wrapper {
+	width: 320px;
+	position: absolute;
+	top: 52px;
+	bottom: 0px;
+	z-index: 1;
+}
+
+.glassbutton {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-orient: vertical;
+
+	text-align: center;
+	-webkit-box-sizing: border-box;
+	height: 25%;
+	float: left;
+}
+
+.one > .keypad-digit,
+.two > .keypad-digit,
+.three > .keypad-digit {
+    margin-top: -22px;
+}
+
+.addcontact > .keypad-digit {
+    line-height: 55px;
+    font-size: 55px;
+}
+
+.one > .keypad-letters {
+    background: url(../images/voicemail-key.png) 50% 65% no-repeat;
+}
+
+.keypad-flex .one {
+	-webkit-border-image: url(../images/dialpad-row-sprite.png) 26 534 2 0;
+	border-width: 26px 0px 2px 0px;
+	width: 106px;
+}
+
+.keypad-flex .one.selected {
+    -webkit-border-image: url(../images/dialpad-row-sprite.png) 26 214 2 320;
+}
+
+.keypad-flex .two {
+	-webkit-border-image: url(../images/dialpad-row-sprite.png) 26 426 2 106;
+	border-width: 26px 0px 2px 0px;
+	width: 108px;
+}
+
+.keypad-flex .two.selected {
+	-webkit-border-image: url(../images/dialpad-row-sprite.png) 26 106 2 426;
+}
+
+.keypad-flex .three {
+	-webkit-border-image: url(../images/dialpad-row-sprite.png) 26 320 2 214;
+	border-width: 26px 0px 2px 0px;
+	width: 106px;
+}
+
+.keypad-flex .three.selected {
+	-webkit-border-image: url(../images/dialpad-row-sprite.png) 26 0 2 534;
+}
+
+.keypad-flex .four,
+.keypad-flex .seven,
+.keypad-flex .addcontact {
+	-webkit-border-image: url(../images/dialpad-row-2-sprite.png) 2 534 2 0;
+
+	border-width: 2px 0px 2px 0px;
+	width: 106px;
+}
+
+.keypad-flex .four.selected,
+.keypad-flex .seven.selected,
+.keypad-flex .addcontact.selected {
+    -webkit-border-image: url(../images/dialpad-row-2-sprite.png) 2 214 2 320;
+}
+
+.keypad-flex .five,
+.keypad-flex .eight,
+.keypad-flex .zero {
+	-webkit-border-image: url(../images/dialpad-row-2-sprite.png) 2 426 2 106;
+	border-width: 2px 0px 2px 0px;
+	width: 108px;
+}
+
+.keypad-flex .five.selected,
+.keypad-flex .eight.selected,
+.keypad-flex .zero.selected {
+	-webkit-border-image: url(../images/dialpad-row-2-sprite.png) 2 106 2 426;
+}
+
+.keypad-flex .six,
+.keypad-flex .nine,
+.keypad-flex .pound {
+	-webkit-border-image: url(../images/dialpad-row-2-sprite.png) 2 320 2 214;
+	border-width: 2px 0px 2px 0px;
+	width: 106px;
+}
+
+.keypad-flex .six.selected,
+.keypad-flex .nine.selected,
+.keypad-flex .pound.selected {
+	-webkit-border-image: url(../images/dialpad-row-2-sprite.png) 2 0 2 534;
+}
+
+/* static size buttons */
+
+.dial-button {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 66px;
+    background: url(../images/dial-button.png) top center no-repeat;
+}
+
+.dial-button:active {
+    background: url(../images/dial-button.png) bottom center no-repeat;
+}
+
+.dial-button.disabled,
+.dial-button.disabled:active {
+    background: url(../images/dial-button.png) center center no-repeat;
+}
+
+.disconnect-button,
+.empty-button {
+    margin: 0;
+    padding: 0;
+    width: 320px;
+    height: 66px;
+    clear: both;
+    background: url(../images/empty-button.png) top center no-repeat;
+    background: url(../images/disconnect-button.png) top center no-repeat;
+    border: none;
+    -webkit-border-image: none;
+}
+
+.empty-button {
+    text-align: center;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 64px;
+    background: url(../images/empty-button.png) top center no-repeat;
+}
+
+.disconnect-button:active {
+    background: url(../images/disconnect-button.png) bottom center no-repeat;
+}
+
+.empty-button:active {
+    color: #222;
+    background: url(../images/empty-button.png) bottom center no-repeat;
+}
+
+.disconnect-button.disabled,
+.disconnect-button.disabled:active {
+    background: url(../images/disconnect-button.png) center center no-repeat;
+}
+
+.empty-button.disabled,
+.empty-button.disabled.selected {
+    background: url(../images/empty-button.png) center center no-repeat;
+}
+
+.fullscreen-pic .disconnect-button {
+    height: 137px;
+    background: url(../images/active-call-sprite.png) 0px -452px no-repeat;
+}
+
+.fullscreen-pic .disconnect-button.disabled {
+    background: url(../images/active-call-sprite.png) 0px -589px no-repeat;
+}
+
+.fullscreen-pic .disconnect-button.selected {
+    background: url(../images/active-call-sprite.png) 0px -726px no-repeat;  
+}
+
+/* dial button icons */
+
+.keypad-flex div.dial-button div,
+.keypad-flex .disconnect-button div {
+	width: 100%;
+	height: 40px;
+	margin-top: -10px !important;
+	margin: auto;
+	background: url(../images/dial-button-icon.png) top center no-repeat;
+}
+
+.keypad-flex .disconnect-button div {
+	margin-top: 6px !important;
+}
+
+.keypad-flex div.dial-button:active div,
+.keypad-flex div.dial-button.disabled div {
+	background: url(../images/dial-button-icon.png) bottom center no-repeat;
+}
+
+.keypad-flex .disconnect-button div {
+	background: url(../images/disconnect-button-icon.png) top center no-repeat;
+}
+
+.keypad-flex .disconnect-button:active div,
+.keypad-flex .disconnect-button.disabled div {
+	background: url(../images/disconnect-button-icon.png) bottom center no-repeat;
+}
+
+/* Firstuse styles */
+
+.firstuse .fullscreen-pic .disconnect-button { background-position-x: -320px; }

@@ -1,0 +1,275 @@
+/*
+ *  Phone
+ *  PIN Pad
+ *  Copyright (c) 2007-2009, Palm Inc.
+ *  All rights reserved.
+ */
+
+.firstuse {
+	background: #000 url(/usr/palm/applications/com.palm.app.firstuse/images/background.png) 0 0 fixed no-repeat;
+}
+
+.info {
+	text-align: center;
+	width: 320px;
+	color: #FFFFFF;
+}
+
+.info .big {
+	margin-top: 5px;
+	font-size: 28px;
+	line-height: 28px;
+	font-weight: bold;
+}
+
+.info .small {
+	font-size: 15px;
+	line-height: 17px;
+	font-weight: bold;
+}
+
+.pin-keypad {
+	text-align: center;
+	padding: 0;
+	width: 320px;
+	margin: 13px 0 0 0;
+}
+
+div.pin-keypad-row {
+	width: 320px;
+	clear: both;
+	max-height: 72px;
+	margin: 0;
+	padding: 0;
+}
+
+.pin-keypad-row .pin-key {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	float: left;
+}
+
+div.pin-key.pin-glassbutton {
+	background: transparent;
+	margin: 0;
+	padding: 0;
+}
+
+.pin-glassbutton {
+	border: none;
+	outline: none;
+	margin: 0;
+	padding: 0;
+}
+
+.pin-menu-short {
+	position: absolute;
+	bottom: 24px;
+	width: 320px;
+	height: 50px;
+}
+
+.pin-menu-button {
+	height: 60px;
+	background: transparent;
+	-webkit-border-image: url(../images/pin/pin-menu-button-tall.png) 0 25 60 25 repeat repeat;
+	-webkit-user-select: none;
+	border-width: 0 25px 0 25px;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 16px;
+	color: white;
+	text-align: center;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.pin-menu-button:active {
+	-webkit-border-image: url(../images/pin/pin-menu-button-tall.png) 60 25 0 25 repeat repeat;
+}
+
+.pin-menu-button.short {
+    width: 320px;
+    height: 50px;
+    -webkit-border-image: url(../images/pin/pin-menu-button.png) 0 25 50 25 repeat repeat;
+}
+
+.pin-menu-button.short:active {
+    -webkit-border-image: url(../images/pin/pin-menu-button.png) 50 25 0 25 repeat repeat;
+}
+
+.pin-menu-button.half {
+	width: 160px;
+}
+
+.pin-form {
+	position:relative;
+	width:100%;
+	height:34px;
+}
+
+.pincode-floating {
+	width: 100%;
+	font-size: 26px;
+	line-height: 28px; 
+	text-align: center;
+	position: absolute; 
+	top: 0px;
+}
+
+.pincode-floating .palm-textfield-disabled {
+	color:white;
+}
+
+.pincode-backspace {
+	position: absolute;
+	top: -1px;
+	right: 10px;
+	background: url(../images/pin/dialpad-backspace.png) top center no-repeat;
+	width: 36px;
+	height: 36px;
+}
+
+.pincode-backspace.selected {
+	background-position: bottom center;
+}
+
+input[type=text].floating,
+input[type=password].floating {
+	background: none;
+	width: 282px;
+	outline: none;
+	border: none;
+	height: 45px;
+	border-width: 10px 8px 7px 8px;
+	-webkit-border-image: url(../images/pin/textfield-9tile.png) 10 8 7 8 stretch stretch;
+	-webkit-box-sizing: border-box;
+	font-size: 20px;
+	line-height: 30px;
+	margin: 0 0 7px 0;
+}
+
+.error-container {
+	color: #333;
+	font-size: 14px;
+	margin: 5px 0px;
+}
+
+.error-container .error-icon {
+	width: 26px;
+	height: 25px;
+	background: url(../images/pin/small-error-icon.png) center center no-repeat;
+	float: left;
+	margin: -5px 5px 0px 0px;
+}
+
+/*Styles for pinpad*/
+
+.pin-main-scene {
+	height: 452px;
+}
+
+.pin-main-scene .keypad-flex {
+	top: 92px;
+	bottom: 68px;
+}
+
+.pin-main-scene .keypad-buttons {
+    bottom: 0px;
+}
+
+.pin-main-scene .keypad-flex .glassbutton {
+    padding-left: 0px;
+}
+
+.pin-main-scene .keypad-flex .keypad-digit {
+    text-align: center;
+    font-size: 34px;
+    width: 100%
+}
+
+.pin-main-scene .keypad-flex .star {
+	-webkit-border-image: url(../images/dialpad-row-3-sprite.png) 2 534 6 0;
+	border-width: 2px 0px 6px 0px;
+	width: 106px;
+}
+
+.pin-main-scene .keypad-flex .zero {
+	-webkit-border-image: url(../images/dialpad-row-3-sprite.png) 2 426 6 106;
+	border-width: 2px 0px 6px 0px;
+	width: 108px;
+}
+
+.pin-main-scene .keypad-flex .zero.selected {
+	-webkit-border-image: url(../images/dialpad-row-3-sprite.png) 2 106 6 426;
+}
+
+.pin-main-scene .keypad-flex .pound {
+	-webkit-border-image: url(../images/dialpad-row-3-sprite.png) 2 320 6 214;
+	border-width: 2px 0px 6px 0px;
+	width: 106px;
+}
+
+.pin-main-scene .keypad-flex .pound > .keypad-digit {
+    height: 50px;
+    background: url(../images/dialpad-backspace.png) 50% top no-repeat;
+}
+
+.pin-main-scene .keypad-flex .pound.selected {
+	-webkit-border-image: url(../images/dialpad-row-3-sprite.png) 2 0 6 534;
+}
+
+.pin-main-scene .keypad-flex .pound.selected > .keypad-digit {
+    background-position: 50% bottom;
+}
+
+.firstuse-bottom-corners {
+	position: fixed;
+	bottom: 24px;
+	height: 23px;
+	width: 320px;
+	background: url(../images/palm-bottom-corners.png) no-repeat;
+    pointer-events: none;
+	z-index: 1;
+}
+
+.firstuse-top-corners {
+	position: fixed;
+	top: 0px;
+	height: 23px;
+	width: 320px;
+	background: url(../images/palm-top-corners.png) no-repeat;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.firstuse-banner-icon {
+    margin: 0px 2px 0px 7px;
+    width: 24px;
+    height: 24px;
+    float: left;
+    background: url(../images/notification-small-ignored.png) center center no-repeat;
+    z-index: 98002;  
+}
+
+.firstuse-banner-container {
+	position: fixed;            
+	height: 24px;    
+	width: 320px;
+	background: #000;
+	bottom: 0; 
+	left: 0;           
+	color: #FFFFFF;
+    z-index: 98001;	    
+}
+
+.notification-text {
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+}

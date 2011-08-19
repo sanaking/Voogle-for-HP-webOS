@@ -1,0 +1,136 @@
+/**
+ *  Phone
+ *  Addressing Widget Overrides
+ *  Copyright (c) 2007-2009, Palm Inc.
+ *  All rights reserved.
+ */
+
+.dialpad-scene .addressing-widget {
+	background: none;
+}
+
+.dialpad-scene .addressing-widget-edit-container.focused,
+.dialpad-scene .addressing-widget-edit-container {
+	padding-top: 1px;
+	border-width: 0 30px 0 30px;
+	height: 48px;
+	-webkit-border-image: url(../images/picker-text.png) 0 30 0 30 repeat repeat;
+}
+
+.dialpad-scene .addressing-widget-edit-container input {
+	color: #fff;
+	min-height: 24px;
+	margin: 4px 0 0 0px;
+}
+
+.dialpad-scene .addressing-widget-edit-container .recipient-area {
+	margin-left: -23px;
+}
+
+.dialpad-scene .addressing-widget-edit-container.focused .addressing-widget-edit-wrapper {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.dialpad-scene .add-contact,
+.dialpad-scene .add-contact-open {
+	position: absolute;
+	margin: 0;
+	top: 0;
+	right: 0;
+	border-width: 0;
+	padding: 0 12px 0 4px;
+	width: 32px;
+	height: 53px;
+	background: url(../images/address-contact.png) 4px 50% no-repeat;
+	-webkit-box-sizing: content-box;
+}
+
+.dialpad-scene .addressing-widget-edit-container .recipient-area .icon.selectable {
+	margin-right: -35px;
+	margin-top: 5px;
+}
+
+.dialpad-scene .addressing-widget-results-container .palm-row.selectable {
+	border-width: 24px 20px;
+	background: none;
+	-webkit-border-image: url(../images/palm-row-selectable.png) 24 20 24 20 repeat repeat;
+}
+
+.dialpad-scene .addressing-widget-results-container .palm-row.selectable .title,
+.dialpad-scene .addressing-widget-results-container .palm-row.selectable .label {
+	color: #FFFFFF;
+}
+
+.dialpad-scene .addressing-widget-results-container {
+	max-height: none !important;
+	top: 49px;
+	-webkit-border-image: none;
+	border-width: 0px;
+	z-index: auto;
+}
+ 
+.dialpad-scene .addressing-widget-results-container-scroll {
+	padding: 5px 0 50px 0;
+}
+ 
+.dialpad-scene .addressing-widget-fade-top { background: none; }
+.dialpad-scene .addressing-widget-fade-bottom { background: none; }
+
+.dialpad-scene .addressing-widget-results-container .label.right,
+.dialpad-scene .title.contact-point {
+	color: #CCCCCC;
+}
+
+.dialpad-scene .addressing-widget .label-container {
+	display: none;
+}
+
+.dialpad-scene .addressing-widget .label-container .label {
+	color: #1879cd;
+	-webkit-user-select: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: normal;
+	padding: 0px 0px 0px 12px;
+}
+
+.dialpad-scene .addressing-widget .hint-text {
+	margin-left: 0px;
+	margin-top: 0px;
+	line-height: 48px;
+	font-size: 16px;
+	font-style: normal;
+	font-family: inherit;
+	z-index: auto;
+}
+
+.dialpad-scene .palm-dark .focused .hint-text,
+.dialpad-scene .addressing-widget .hint-text {
+	color: #B8C7D5;
+}
+
+.dialpad-scene .recipient {
+	max-width: 148px;
+	display: inline-block;
+	padding: 11px 1px 3px 14px;
+	color: #000;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.dialpad-scene .addressing-widget input {
+	border: none;
+	outline: none;
+	background: transparent;
+}
+
+.dialpad-scene .gal-lookup .palm-activity-indicator-small {
+	margin-right: 10px;
+}
+
+.dialpad-scene .smarttextfield.single > .editable {
+	padding-left: 0;
+	color: #B8C7D5;
+	margin-top: 10px;
+}

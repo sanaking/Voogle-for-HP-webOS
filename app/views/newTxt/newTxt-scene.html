@@ -1,0 +1,30 @@
+<!--
+/*
+ * Voogle2
+ * Version 2.x of Voogle
+ * Copyright 2011 - C2 Partners, LLC. DBA kandutech
+ * THIS SOURCE CODE MAY NOT BE DISTRBUTED IN ANY WAY WITHOUT PERMISSION FROM C2 PARTNERS, LCC. DBA KANDUTECH.
+ * DISTRIBUTING THIS SOURCE CODE WILL RESULT IN PROMPT LEGAL ACTION.
+ * DEVELOPED BY: CONNOR LACOMBE & THE KANDUTECH TEAM.
+ * FOR CONTACT INFORMATION VISIT: HTTP://KANDUTECH.COM
+ */
+-->
+<div class="appBackground"></div>
+<div style="position:fixed; top:0; left:0; height:50px; width:100%;">
+	<div class="palm-row single">
+        <div class="palm-row-wrapper textfield-group" style="border-width: 15px; z-index:1; width:290px; height:25px; -webkit-border-image: url(images/textfield_top.png) 15 15 15 15 stretch stretch; position:fixed; top:0; left:0;">
+  <div x-mojo-element="TextField" id="smsNum" class="title" style="float:left; width:245px;"></div>
+  <div style="float:right; height:50px; width:50px; margin-right:-5px; margin-top:-10px; background-image:url(images/contactsIcon.png); background-repeat:no-repeat; background-position:center center;" onclick="contacts();"></div>
+            </div>
+            </div>
+    </div>
+	<div style="width:310px; margin-left:auto; margin-right:auto; padding-top:45px; margin-top:5px;"><div id="loader" x-mojo-element="Spinner" style="margin-left:auto; visibility:hidden; margin-right:auto; margin-top:50px;"></div>
+   
+</div>
+<div style="position:fixed; bottom:0; left:0; width:100%;">
+	<div class="palm-row single">
+        <div class="palm-row-wrapper textfield-group" style="border-width: 15px; z-index:1; width:290px; min-height:25px; -webkit-border-image: url(images/textfield_bottom.png) 15 15 15 15 stretch stretch; position:fixed; bottom:0; left:0;">
+  <div x-mojo-element="TextField" id="smsMsg" class="title"></div>
+            </div>
+            </div>
+    </div>

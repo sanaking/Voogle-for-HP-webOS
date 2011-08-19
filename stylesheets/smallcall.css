@@ -1,0 +1,49 @@
+/*
+ * Banner Alerts 
+ 
+Copyright 2009 Palm, Inc.  All rights reserved.
+
+*/
+
+body {
+	background: transparent;
+}
+
+body.palm-default {
+	background: transparent;
+}
+
+.phone-banner-container {
+	background: #000;
+	height: 28px; 
+	max-width: 200px;
+}
+
+.banner-text {
+	color: #ffffff;  	                               
+	font-size: 16px;   
+	font-family: 'Prelude-CondensedBold';
+	line-height: 26px;
+	padding-top: 0px;
+}
+
+.banner-text > div {
+  display: inline-block;
+}
+
+.call-message {
+  max-width: 58%;
+}
+
+.palm-banner-icon {
+	width: 30px;
+	height: 28px;
+	float: left;
+	background: url(../images/notification-small-active.png) center center no-repeat;
+}
+
+.truncating-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

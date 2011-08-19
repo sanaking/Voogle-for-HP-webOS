@@ -1,0 +1,25 @@
+<!--
+/*
+ * Voogle2
+ * Version 2.x of Voogle
+ * Copyright 2011 - C2 Partners, LLC. DBA kandutech
+ * THIS SOURCE CODE MAY NOT BE DISTRBUTED IN ANY WAY WITHOUT PERMISSION FROM C2 PARTNERS, LCC. DBA KANDUTECH.
+ * DISTRIBUTING THIS SOURCE CODE WILL RESULT IN PROMPT LEGAL ACTION.
+ * DEVELOPED BY: CONNOR LACOMBE & THE KANDUTECH TEAM.
+ * FOR CONTACT INFORMATION VISIT: HTTP://KANDUTECH.COM
+ */
+-->
+<div class="appBackground"></div>
+<div class="appHeader">
+	<div id="smallLoader" x-mojo-element="Spinner" style="visibility:hidden; position:absolute; left:5px; top:8px;"></div>
+	<div class="folderTitle" id="folderSelect">Inbox</div>
+	<div class="headerRefresh" id="refreshButton"></div>
+</div>
+<div class="appContent">
+	<div id="inboxLoader" x-mojo-element="Spinner" style="margin-left:auto; margin-right:auto; margin-top:60px;"></div>
+	<div x-mojo-element="Scroller" id="scroller" style="position:fixed; height:87%; top:50px; left:0; width:320px;">
+		<div style="color:#666; font-size:36px; text-align:center; width:100%; top:50%; display:none; position:absolute; left:0; margin-top:-25%;" id="noMsgsAlert">No messages</div>
+		<div id="inboxMsgs" x-mojo-element="List" style="width:320px; padding-bottom:50px;">
+	    </div>
+	</div>
+</div>
