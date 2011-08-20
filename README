@@ -1,0 +1,7 @@
+Name: Voogle for HP webOS
+Made by: Connor LaCombe
+Type: HP webOS Application and PHP API
+
+Fair warning: The source code is very messy, plenty of bugs and a lot has to be re-written due to Google changing their design on their Google Voice page (yes, it matters and you're head will explode when you see why).
+
+I don't really know what license or whatever to use with this so just do whatever you want, it's open source.
